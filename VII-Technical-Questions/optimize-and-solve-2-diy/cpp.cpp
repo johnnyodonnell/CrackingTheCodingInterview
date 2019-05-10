@@ -9,58 +9,39 @@
 
 using namespace std;
 
-class Permutations {
-    private:
-        struct Node {
-            char c;
-            int index;
-        };
+void print_permutations(const string small, const string big) {
+    unordered_map<char, pair<int, int>> small_char_map {};
 
-        size_t chars_left;
-        size_t max_size;
-        list<Node> nodes {};
-        unordered_map<char, pair<int, int>> small_char_map {};
+    for (char c : small) {
+        small_char_map[c].first++;
+    }
 
-    public:
-        Permutations(const string small)
-            :chars_left{small.length()}, max_size{small.length()} {
-                for (char c : small) {
-                    small_char_map[c].first++;
-                }
-            }
+    size_t chars_left = small.length();
 
-        void add_char(char c, int index) {
-            if (nodes.size() >= max_size) {
-                Node& front = nodes.front();
-                nodes.pop_front();
-                auto p = small_char_map.find(front.c);
-                if (p != small_char_map.end()) {
-                    if (p->second.second <= p->second.first) {
-                        chars_left++;
-                    }
-                    p->second.second--;
-                }
-            }
+    for (int i = 0; i < big.length(); i++) {
+        const int k = i - small.length();
 
-            nodes.push_back({c, index});
-            auto p = small_char_map.find(c);
+        if (k > 0) {
+            auto p = small_char_map.find(big[k]);
             if (p != small_char_map.end()) {
-                if (p->second.second < p->second.first) {
-                    chars_left--;
+                if (p->second.second <= p->second.first) {
+                    chars_left++;
                 }
-                p->second.second++;
-            }
-
-            if (chars_left <= 0) {
-                cout << nodes.front().index << endl;
+                p->second.second--;
             }
         }
-};
 
-void print_permutations(const string small, const string big) {
-    Permutations obj {small};
-    for (int i = 0; i < big.length(); i++) {
-        obj.add_char(big[i], i);
+        auto p = small_char_map.find(big[i]);
+        if (p != small_char_map.end()) {
+            if (p->second.second < p->second.first) {
+                chars_left--;
+            }
+            p->second.second++;
+        }
+
+        if (chars_left <= 0) {
+            cout << (k + 1) << endl;
+        }
     }
 }
 
