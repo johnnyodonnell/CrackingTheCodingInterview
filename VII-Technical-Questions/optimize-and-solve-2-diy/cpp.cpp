@@ -5,6 +5,8 @@
 /*
  * From p. 70
  *
+ * O(b + s)
+ *
  */
 
 using namespace std;
