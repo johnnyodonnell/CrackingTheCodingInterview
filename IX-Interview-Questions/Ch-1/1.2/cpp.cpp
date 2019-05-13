@@ -8,7 +8,7 @@ using namespace std;
  * Runs O(s + t)
  *
  */
-bool check_permutation(const string source, const string target) {
+bool check_permutation(const string& source, const string& target) {
     if (source.length() != target.length()) {
         return false;
     }
@@ -33,7 +33,7 @@ bool check_permutation(const string source, const string target) {
     return chars_needed == 0;
 }
 
-void run_check_permutation(const string source, const string target) {
+void run_check_permutation(const string& source, const string& target) {
     cout << "Is '" << source << "' a permutation of '" << target << "'? "
         << check_permutation(source, target) << endl;
 }

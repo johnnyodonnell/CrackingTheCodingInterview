@@ -9,7 +9,7 @@ using namespace std;
  * Runs O(n * log2(n))
  *
  */
-bool is_unique_no_extra_space(const string str) {
+bool is_unique_no_extra_space(const string& str) {
     string str_copy {str};
     sort(str_copy.begin(), str_copy.end());
     for (int i = 1; i < str_copy.length(); i++) {
@@ -24,7 +24,7 @@ bool is_unique_no_extra_space(const string str) {
  * Runs O(n)
  *
  */
-bool is_unique(const string str) {
+bool is_unique(const string& str) {
     unordered_map<char, bool> char_exists {};
     for (auto ch : str) {
         if (char_exists.find(ch) != char_exists.end()) {
@@ -36,7 +36,7 @@ bool is_unique(const string str) {
     return true;
 }
 
-void run_is_unique(const string str) {
+void run_is_unique(const string& str) {
     cout << "Is '" << str << "' unique? " << is_unique_no_extra_space(str) << endl;
 }
 
