@@ -25,10 +25,10 @@ class Shelter {
         list<Animal*> q {};
 
         template <typename T>
-        T dequeue() {
+        T* dequeue() {
             auto p = q.begin();
             while (p != q.end()) {
-                T result = dynamic_cast<T>(*p);
+                T* result = dynamic_cast<T*>(*p);
 
                 if (result) {
                     q.erase(p);
@@ -51,11 +51,11 @@ class Shelter {
         }
 
         Dog* dequeueDog() {
-            return dequeue<Dog*>();
+            return dequeue<Dog>();
         }
 
         Cat* dequeueCat() {
-            return dequeue<Cat*>();
+            return dequeue<Cat>();
         }
 
         bool empty() {
