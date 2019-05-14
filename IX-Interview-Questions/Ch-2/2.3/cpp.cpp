@@ -11,7 +11,10 @@ using namespace std;
  * must be passed. This problem could be solved completely by creating
  * a custom singly linked list.
  *
- */
+ * EDIT:
+ *
+ * This is slower than the optimal solution
+ *
 void delete_node(forward_list<int>::iterator& node, forward_list<int>& flist) {
     forward_list<int>::iterator prev {};
     auto next = node;
@@ -25,6 +28,18 @@ void delete_node(forward_list<int>::iterator& node, forward_list<int>& flist) {
         next++;
     }
 
+    flist.erase_after(prev);
+}
+*/
+
+/*
+ * Runs O(1)
+ *
+ */
+void delete_node(forward_list<int>::iterator& node, forward_list<int>& flist) {
+    auto prev = node;
+    node++;
+    *prev = *node;
     flist.erase_after(prev);
 }
 
