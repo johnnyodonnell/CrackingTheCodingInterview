@@ -1,6 +1,12 @@
 #include <iostream>
 #include <forward_list>
 
+/*
+ * NOTE: This solution fails to imagine the possibility that the heads
+ * of two linked lists merge into single linked list. This isn't possible
+ * with forward_lists, but is possible with a more basic linked list.
+ *
+ */
 
 using namespace std;
 
