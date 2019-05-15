@@ -14,19 +14,25 @@ bool is_rotation(const string& base, const string& rotated) {
 
     int rotated_starting_index = -1;
     for (int i = 0; i < rotated.length(); i++) {
-        if (rotated[i] == base[0]) {
-            rotated_starting_index = i;
+        int base_i = 0;
+        int rotated_i = i;
+
+        while(rotated_i < rotated.length()) {
+            if (rotated[rotated_i] != base[base_i]) {
+                goto outer;
+            }
+
+            rotated_i++;
+            base_i++;
         }
+
+        rotated_starting_index = i;
+
+        outer:;
     }
 
     if (rotated_starting_index < 0) {
         return false;
-    }
-
-    for (int i = rotated_starting_index; i < rotated.length(); i++) {
-        if (rotated[i] != base[i - rotated_starting_index]) {
-            return false;
-        }
     }
 
     auto found =
@@ -44,6 +50,8 @@ void run_is_rotation(const string& base, const string& rotated) {
 }
 
 int main() {
+    run_is_rotation("waterworks", "erworkswat");
+    run_is_rotation("waterworks", "rkswaterwo");
     run_is_rotation("waterbottle", "erbottlewat");
     run_is_rotation("waterbottle", "erbottlewxx");
     run_is_rotation("waterbottle", "erbottlexxx");
