@@ -4,7 +4,7 @@ template <typename T>
 GraphNode<T>::GraphNode(const T& c_value) :value{c_value} {}
 
 template <typename T>
-const std::vector<GraphNode<T>*>& GraphNode<T>::get_neighbors() {
+const std::vector<GraphNode<T>*>& GraphNode<T>::get_neighbors() const {
     return neighbors;
 }
 
@@ -14,7 +14,7 @@ void GraphNode<T>::add_neighbor(GraphNode<T>* node) {
 }
 
 template <typename T>
-const T& GraphNode<T>::get_value() {
+const T& GraphNode<T>::get_value() const {
     return value;
 }
 
