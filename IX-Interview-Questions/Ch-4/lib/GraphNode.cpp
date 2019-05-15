@@ -13,3 +13,8 @@ void GraphNode<T>::add_neighbor(GraphNode<T>* node) {
     neighbors.push_back(node);
 }
 
+template <typename T>
+const T& GraphNode<T>::get_value() {
+    return value;
+}
+

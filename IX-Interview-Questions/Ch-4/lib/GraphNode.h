@@ -14,6 +14,8 @@ class GraphNode {
         const std::vector<GraphNode*>& get_neighbors();
 
         void add_neighbor(GraphNode*);
+
+        const T& get_value();
 };
 
 // https://stackoverflow.com/a/495056/5832619
