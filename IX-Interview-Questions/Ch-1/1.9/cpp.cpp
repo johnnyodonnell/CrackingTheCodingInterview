@@ -35,6 +35,12 @@ bool is_rotation(const string& base, const string& rotated) {
         return false;
     }
 
+    /*
+     * A loop would be probably be better than this, but the book
+     * asks for the solution to make a call to an `isSubstring`
+     * like function.
+     *
+     */
     auto found =
         rotated.find(
                 base.substr(
