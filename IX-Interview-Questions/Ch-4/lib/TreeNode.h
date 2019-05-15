@@ -1,6 +1,10 @@
 #ifndef TREE_NODE_H
 #define TREE_NODE_H
 
+/*
+ * A more accurate name for this class would be BinaryNode
+ *
+ */
 template <typename T>
 class TreeNode {
     private:
