@@ -8,6 +8,7 @@
 template <typename T>
 class TreeNode {
     private:
+        TreeNode<T>* parent = nullptr;
         T value;
         std::pair<TreeNode*, TreeNode*> children {};
 
@@ -21,6 +22,8 @@ class TreeNode {
         TreeNode<T>* get_right() const;
 
         void set_right(TreeNode<T>*);
+
+        TreeNode<T>* get_parent() const;
 
         const T& get_value() const;
 
