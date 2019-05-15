@@ -69,3 +69,8 @@ void BinarySearchTree<T>::add_sorted_array(
     add_sorted_array(sorted_array.begin(), sorted_array.end());
 }
 
+template <typename T>
+TreeNode<T>* BinarySearchTree<T>::get_head() {
+    return head;
+}
+

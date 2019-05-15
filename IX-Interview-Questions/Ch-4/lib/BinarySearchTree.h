@@ -16,6 +16,7 @@ class BinarySearchTree {
                 typename std::vector<T>::const_iterator,
                 typename std::vector<T>::const_iterator);
         void add_sorted_array(const std::vector<T>&);
+        TreeNode<T>* get_head();
 };
 
 #include "BinarySearchTree.cpp"
