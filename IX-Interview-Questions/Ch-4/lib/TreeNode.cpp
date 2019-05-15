@@ -20,13 +20,19 @@ TreeNode<T>* TreeNode<T>::get_parent() const {
 
 template <typename T>
 void TreeNode<T>::set_left(TreeNode<T>* left) {
-    left->parent = this;
+    if (left) {
+        left->parent = this;
+    }
+
     children.first = left;
 }
 
 template <typename T>
 void TreeNode<T>::set_right(TreeNode<T>* right) {
-    right->parent = this;
+    if (right) {
+        right->parent = this;
+    }
+
     children.second = right;
 }
 
