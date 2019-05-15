@@ -40,7 +40,7 @@ void merge(
 }
 
 /*
- * Contains some duplicates
+ * Contains some duplicates... actually, it doesn't surprisingly
  *
  */
 template <typename T>
@@ -87,6 +87,14 @@ int main() {
     }
 
     auto vecs = possible_arrays(tree.get_head());
+    print(vecs);
+
+    tree = {};
+    for (auto i : {5, 3, 2, 4, 4}) {
+        tree.add(i);
+    }
+
+    vecs = possible_arrays(tree.get_head());
     print(vecs);
 
     tree = {};
