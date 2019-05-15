@@ -7,7 +7,6 @@ template <typename T>
 class BinarySearchTree {
     private:
         TreeNode<T>* head = nullptr;
-        int height(TreeNode<T>*);
 
     public:
         void add(const T&);

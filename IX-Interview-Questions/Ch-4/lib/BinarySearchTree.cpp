@@ -1,15 +1,5 @@
 
 template <typename T>
-int BinarySearchTree<T>::height(TreeNode<T>* node) {
-    if (node) {
-        return 1 +
-            std::max(height(node->get_left()), height(node->get_right()));
-    } else {
-        return 0;
-    }
-}
-
-template <typename T>
 void BinarySearchTree<T>::add(const T& value) {
     auto new_node = new TreeNode<T>(value);
 
@@ -42,7 +32,7 @@ void BinarySearchTree<T>::add(const T& value) {
 
 template <typename T>
 int BinarySearchTree<T>::height() {
-    return height(head);
+    return head->height();
 }
 
 template <typename T>
