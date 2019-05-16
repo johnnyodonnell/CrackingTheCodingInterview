@@ -9,7 +9,8 @@
 
 using namespace std;
 
-bool is_binary_search_tree(const TreeNode<int>* node) {
+bool is_binary_search_tree(
+        const TreeNode<int>* node, int* min = nullptr, int* max = nullptr) {
     if (!node) {
         return true;
     }
@@ -19,16 +20,26 @@ bool is_binary_search_tree(const TreeNode<int>* node) {
     auto left_child = node->get_left();
     auto right_child = node->get_right();
 
-    if (left_child && (left_child->get_value() > value)) {
-        return false;
+    if (left_child) {
+        auto child_value = left_child->get_value();
+        if ((child_value > value)
+                || (min && (child_value < *min))
+                || (max && (child_value > *max))) {
+            return false;
+        }
     }
 
-    if (right_child && (right_child->get_value() < value)) {
-        return false;
+    if (right_child) {
+        auto child_value = right_child->get_value();
+        if ((child_value < value)
+                || (min && (child_value < *min))
+                || (max && (child_value > *max))) {
+            return false;
+        }
     }
 
-    return is_binary_search_tree(left_child)
-        && is_binary_search_tree(right_child);
+    return is_binary_search_tree(left_child, min, &value)
+        && is_binary_search_tree(right_child, &value, max);
 }
 
 TreeNode<int>* make_normal_tree(const vector<int>& vec) {
@@ -43,9 +54,9 @@ TreeNode<int>* make_normal_tree(const vector<int>& vec) {
                 return head;
             });
 
-    for (int i = 1; i < vec.size(); i++) {
+    for (int i = 0; i < vec.size(); i++) {
         auto set_value = node_q.front();
-        auto node = set_value(i);
+        auto node = set_value(vec.at(i));
 
         node_q.push([node](int value) {
                     auto new_node = new TreeNode<int>{value};
@@ -73,5 +84,8 @@ int main() {
 
     auto normal_tree = make_normal_tree(sorted_array);
     cout << is_binary_search_tree(normal_tree) << endl;
+
+    auto almost_binary = make_normal_tree({6, 3, 10, 1, 7});
+    cout << is_binary_search_tree(almost_binary) << endl;
 }
 

@@ -7,6 +7,9 @@
  * The solution to this problem (add_sorted_arry) can be found
  * in the BinarySearchTree class
  *
+ * The book gives a clever solution to this problem that is more efficient
+ * than the one implemented here
+ *
  */
 
 using namespace std;
