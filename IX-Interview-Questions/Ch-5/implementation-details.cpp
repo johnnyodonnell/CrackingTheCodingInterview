@@ -22,5 +22,14 @@ int main() {
     } else {
         cout << "Using logical shift" << endl;
     }
+
+    cout << endl;
+
+    // https://stackoverflow.com/questions/7622/are-the-shift-operators-arithmetic-or-logical-in-c
+    // For my current implementation (HP laptop) it looks like left shift
+    // always does a logical shift, but right shift does arithmetic shift
+    cout << (1 << 30) << endl;
+    cout << (1 << 31) << endl;
+    cout << ((1 << 31) >> 1) << endl;
 }
 
