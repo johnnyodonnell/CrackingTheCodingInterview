@@ -10,10 +10,10 @@ Similarly find the probably of collision with n ants on an n-vertex polygon.
 
 Answer:
 
-Total Possibilities = 3 * 2 = 6
+Total Possibilities = 2^3 = 8
 Possibilities they all pick they same direction (left or right): 2
 
-Probability of collision: 2 / 3
+Probability of collision: 3/4
 
-Probablity of collison for n-vertx: (n - 1) / n
+Probablity of collison for n-vertx: (2^n - 2) / 2^n
 
