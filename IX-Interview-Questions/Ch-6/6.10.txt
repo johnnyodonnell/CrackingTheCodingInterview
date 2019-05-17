@@ -5,10 +5,21 @@ strips which can be used to detect poison. A single drop of poison will turn
 the test strip positive permanently. You can put any number of drops on a
 test strip at once and you can reuse a test strip as many times as you'd like
 (as long as the results are negative). However, you can only run tests once
-per day and it takes sever days to return a result. How would you figure out
+per day and it takes seven days to return a result. How would you figure out
 the poisoned bottle in as few days as possible?
 
 Answer:
 
+1  test 500
+2  test 250
+3  test 125
+4  test 63
+5  test 32
+6  test 16
+7  test 8
+8  test 4
+9  test 2
+10 test 1
 
+70 days
 
