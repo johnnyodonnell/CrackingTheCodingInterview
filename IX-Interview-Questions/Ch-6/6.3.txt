@@ -7,3 +7,43 @@ your answer (by providing an example or showing why it's impossible).
 
 Answer:
 
+2x2 board (1 domino)
+- Doesn't work
+
+3x3 board (3 dominos)
+- Doesn't work
+- No odd-by-odd board will work
+
+2x4 board (3 dominos)
+- Doesn't work
+
+ xxx
+xxx
+
+4x4 board (7 dominos)
+- Doesn't work
+
+ xxx
+xxxx
+xxxx
+xxx
+
+2x8 board (15 dominos)
+
+ xxxxxxx
+xxxxxxx
+
+4x8 board (15 dominos)
+
+ xxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxx
+
+8x8 (31 dominos)
+
+It's impossible because to fill the bottom half of the 8x8, the top half
+then becomes a 4x8 with the two corners removed. To fill the bottom half of
+a 4x8, the top top half becomes a 2x8 with two corners removed. To fill
+the bottom half of a 2x8 board, the top half will be impossible to fill.
+
