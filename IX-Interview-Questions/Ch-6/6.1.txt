@@ -7,4 +7,24 @@ You can only use the scale once.
 
 Answer:
 
+Number each bottle 1 to 20. Put a n pills from the each n-numbered bottle.
+
+1, 9 = 10
+2, 8 = 10
+3, 7 = 10
+4, 6 = 10
+5    = 5
+10   = 10
+
+11, 19 = 20
+12, 18 = 20
+13, 17 = 20
+14, 16 = 20
+15     = 15
+20     = 20
+
+50 + 100 + 20 = 170
+
+heavy bottle will be bottle b, where
+b = (total weight - 170) / .1
 
