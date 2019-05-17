@@ -2,11 +2,45 @@ Question:
 
 A bunch of people are living on an island, when a vistor comes with a strange
 order: all blue-eyed people must leave the island as soon as possible. There
-will be al fight out at 8:00pm ever evening. Each person can see everyone
-else's eye color, but they do not know their won (no is anyone allowed to
+will be a fight out at 8:00pm every evening. Each person can see everyone
+else's eye color, but they do not know their own (nor is anyone allowed to
 tell them). Additionally, they do not know how many people have blue eyes,
 although they do know at least one person does. How many days will it take
 the blue-eyed people to leave?
 
+Assumptions:
+
+I'm guessing, no one is allowed to tell anyone that they should get on the
+plane. This isn't technically telling someone their eye color, but it can
+be easily deduced that they have blue eyes if they are told to get on the
+plane.
+
 Answer:
+
+1 person (1 blue)
+- blue person can board plane on day 1
+
+2 people (1 non-blue, 1 blue)
+- blue person can board plane on day 1
+- non-blue will realize they have non-blue eyes after the flight on day 1
+
+2 people (2 blue)
+- neither can board plane on day 1
+- both will realize they have blue eyes after the flight on day 1
+- they can both board plane on day 2
+
+3 people (2 non-blue, 1 blue)
+- blue person can board plane on day 1
+- non-blue will realize they have non-blue eyes after the flight on day 1
+
+3 people (1 non-blue, 2 blue)
+- nobody can board plane on day 1
+- both blues will realize they have blue eyes after the flight on day 1
+
+3 people (3 blue)
+- nobody can board plane on day 1
+- nobody can board plane on day 2
+- all blues will realize they have blue eyes after the flight on day 2
+
+days = no. of blues
 
