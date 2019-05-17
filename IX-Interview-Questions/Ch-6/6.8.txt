@@ -78,5 +78,5 @@ Answer:
 - Drop every 6 floors
 - Worst case: 20 drops
 
-10, 9, or 8
+*** I should have tried values higher than 10 as well
 
