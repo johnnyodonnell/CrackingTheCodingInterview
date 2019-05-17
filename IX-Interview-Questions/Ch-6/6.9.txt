@@ -9,4 +9,39 @@ in which he toggles only locker #100, how many lockers are open?
 
 Answer:
 
+i = 1 .. 100
+- Any locker divisible by 1 will be open
+
+i = 2 .. 50
+- Any locker divisible by 2 will be closed
+
+i = 3 .. 50 + 16 - 17 = 49
+- Any locker divisible by 2 and 3 will be opened
+- Any locker only divisible by 3 will be closed
+
+i = 4 .. 49 - 8 + 17 = 58
+- Any locker divisible by 3 and 4 will be closed
+- Any locker only divisible by 4 will be opened
+
+i = 5 .. 58 + 1 + 5 - 4 + 4 - 6 = 58
+- Any locker divisible by 3, 4 and 5 will be opened
+- Any locker divisible by 3 and 5 will be opened
+- Any locker divisible by 4 and 5 will be closed
+- Any locker divisible by 2 and 5 will be opened
+- Any locker only divisible by 5 will be closed
+
+1 = open
+2 = closed
+3 = closed
+4 = open
+5 = closed
+6 = closed
+7 = closed
+8 = closed
+9 = open
+10 = closed
+
+Opened: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
+
+10 lockers are open
 
