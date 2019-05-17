@@ -16,15 +16,15 @@ Number each bottle 1 to 20. Put a n pills from the each n-numbered bottle.
 5    = 5
 10   = 10
 
-11, 19 = 20
-12, 18 = 20
-13, 17 = 20
-14, 16 = 20
+11, 19 = 30
+12, 18 = 30
+13, 17 = 30
+14, 16 = 30
 15     = 15
 20     = 20
 
-50 + 100 + 20 = 170
+50 + 40 + 120 = 210
 
 heavy bottle will be bottle b, where
-b = (total weight - 170) / .1
+b = (total weight - 210) / .1
 
