@@ -23,3 +23,5 @@ Answer:
 
 70 days
 
+*** The book has some great and much better solutions for this problem
+
