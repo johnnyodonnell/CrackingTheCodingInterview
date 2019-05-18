@@ -23,7 +23,7 @@ class Othello {
                 void flip();
                 Color get_color();
                 const Player& owner();
-        }
+        };
 
     private:
         std::vector<std::vector<Piece>> pieces;
