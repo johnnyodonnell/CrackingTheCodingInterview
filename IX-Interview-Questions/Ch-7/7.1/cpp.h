@@ -29,7 +29,7 @@ class Joker : public Card {
 
 class Deck {
     private:
-        std::vector<Card> cards;
+        std::vector<Card*> cards;
 
     public:
         Deck();
