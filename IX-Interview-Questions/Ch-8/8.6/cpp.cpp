@@ -5,55 +5,23 @@
 using namespace std;
 
 template <typename T>
-void print_stack(stack<T> stk) {
-    while (!stk.empty()) {
-        cout << stk.top() << ", ";
-        stk.pop();
-    }
-    cout << endl;
-}
-
-template <typename T>
 void move_stack(
         stack<T>& source, int source_size,
-        stack<T>& target, int target_size,
-        stack<T>& helper, int helper_size) {
+        stack<T>& target, stack<T>& helper) {
     if (source_size <= 0) {
         return;
-    } else if ((source_size % 2) == 0) {
-        helper.push(source.top());
-        source.pop();
-
-        move_stack(
-                target, target_size,
-                helper, 0,
-                source, 0);
-        move_stack(
-                source, source_size - 1,
-                target, 0,
-                helper, helper_size + target_size + 1);
     } else {
+        move_stack(source, source_size - 1, helper, target);
         target.push(source.top());
         source.pop();
-
-        move_stack(
-                helper, helper_size,
-                target, 0,
-                source, 0);
-        move_stack(
-                source, source_size - 1,
-                target, target_size + helper_size + 1,
-                helper, 0);
+        move_stack(helper, source_size - 1, target, source);
     }
 }
 
 template <typename T>
 void move_stack(stack<T>& source, stack<T>& target) {
     stack<T> helper {};
-    move_stack(
-            source, source.size(),
-            target, 0,
-            helper, 0);
+    move_stack(source, source.size(), target, helper);
 }
 
 int main() {
