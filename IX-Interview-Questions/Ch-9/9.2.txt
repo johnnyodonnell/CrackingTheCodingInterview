@@ -1,0 +1,13 @@
+
+Relationships between profiles would be many-to-many.
+
+If using an SQL database, a separate table representing profile relationships
+could be used.
+
+If using a NoSQL database, each profile could hold an id for profiles for
+which they have a relationship with. Thus, redundant information would
+need to be stored in two different areas of the database.
+
+A BFS search starting from both the start and end nodes would be a good
+solution for finding the shortest path.
+
