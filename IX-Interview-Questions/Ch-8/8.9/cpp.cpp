@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/*
+ * Hasing isn't free, so there might be a better solution for this
+ *
+ */
 void print_parens(int n) {
     if (n <= 0) {
         cout << "Nothing to print" << endl;
