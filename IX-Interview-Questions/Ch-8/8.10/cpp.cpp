@@ -70,5 +70,7 @@ int main() {
     print_screen(screen);
     paint_fill(screen, 10, 10, 2);
     print_screen(screen);
+    paint_fill(screen, 0, 0, 4);
+    print_screen(screen);
 }
 
