@@ -1,0 +1,6 @@
+
+The paste text area id can be randomly generated. This id will be used
+as part of the URL.
+
+The text in the paste area can be saved in a database along with its id.
+
