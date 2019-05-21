@@ -4,6 +4,10 @@
 /*
  * I feel like I missed the reason why this was in the Recursion chapter
  *
+ * After looking at the solutions, the reason this is in the Recursion
+ * chapter is because binary search actually provides the most efficient
+ * solution to this problem
+ *
  */
 
 using namespace std;
