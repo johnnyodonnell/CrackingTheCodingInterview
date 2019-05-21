@@ -1,0 +1,13 @@
+
+I would keep a separate table with the top selling items.
+
+Have a value that is close, but guaranteed to be slightly lower, to the
+lowest selling item on the top selling item. Whenever an item sells and
+its total sales exceeds this value, then queue this item for potential
+insertion into the top selling items table.
+
+The queue and insertion computation can take place on the same system
+that executed the sale. Or they can be handled by other systems. In
+either case they should be asynchronous and not delay the execution
+of a sale.
+
