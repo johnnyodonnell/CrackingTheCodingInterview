@@ -1,0 +1,23 @@
+
+Questions:
+- How many stocks or indices does the average client request information for?
+- Who are the clients? Are they people or other systems?
+- How often do the clients make requests? Are they expected to saved
+    information to their own systems? Will we need to serve requests
+    for data well in the past?
+- What kind of security will be needed for this?
+
+Assumptions:
+- We'll need a system that can scale horizontally with the assumption that
+    the number of clients will increase over time
+- Although this is end-of-day data, financial data often needs to be delivered
+    quickly. We will assume this data needs to be delivered quickly
+- This information will need to be available as soon as markets close
+
+Recommendations:
+- The system needs to work asynchronously. While the system is fetching data
+    from the database, it needs to be able to handle new client requests
+- Requests and responses will use the HTTP protocol
+- The system should use caching since data from more recent dates are likely
+    to be more in demand than less recent dates
+
