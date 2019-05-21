@@ -1,0 +1,18 @@
+
+Bank and financial account seems to take awhile to fetch; thus, I would cache
+this data and also make periodic fetches while users are offline to keep this
+cache as fresh as possible.
+
+There is a tradeoff between keeping the cache fresh and using compute
+resources. Finding the right balance between these two might be a good
+problem space for machine learning.
+
+Machine learning would be super helpeful for categorizing transactions.
+In fact, it may be the only option for categorizing transacitons at scale.
+
+Analyzing spending habits would require comparing transactions from one
+time period to a previous time period of the same duration.
+
+Recommendations can be made after there is sufficient data to analyze
+transactions over time.
+
