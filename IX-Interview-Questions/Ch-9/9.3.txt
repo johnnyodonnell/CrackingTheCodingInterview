@@ -1,0 +1,6 @@
+
+Store the address after visiting a link. Before visiting a link, check in
+the store to see if it has already been visited.
+
+The address text could be hashed to make lookup faster.
+
