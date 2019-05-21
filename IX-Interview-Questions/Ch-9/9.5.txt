@@ -1,0 +1,12 @@
+
+A cache could be stored on each of the frontend servers for super popular
+search requests. A separate cluser could also store frequent searches.
+This cluster would be available on the network to the frontend servers.
+
+The data in the caches could have an expiration date. They could have their
+data pushed to them. For example, the most popular searches could be
+periodically pushed to the caches. Also, depending how much control we
+have over the caches, we may able to fetch the fresh data directly from
+the server. Finally, the frontend servers could update the caches after
+making a frequest `processSearch`
+
