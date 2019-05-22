@@ -1,0 +1,10 @@
+
+Split all strings into 1 of 26 files depending on their first character.
+
+Assuming these strings are evenly distrubted, each file should be a little
+less than 1 GB. This means we can load one of these files into memory
+at a time. Once we load the file, we can sort the file.
+
+After each of the 26 files have been sorted. We can can combine them and
+overwrite the original file.
+
