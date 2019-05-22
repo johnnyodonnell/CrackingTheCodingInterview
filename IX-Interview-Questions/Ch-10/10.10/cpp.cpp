@@ -6,7 +6,13 @@
 /*
  * `track` runs O(n) and `get_rank_of_number` runs O(1)
  *
- * instead `track` could run O(n) `get_rank_of_number` could run O(n)
+ * instead `track` could run O(1) and  `get_rank_of_number` could run O(n)
+ *
+ * The book provides a solution where `track` runs in O(log(n))
+ * and `get_rank_of_number` runs in O(log(n))
+ *
+ * This solution isn't necessarily more optimal than my suggestions, but
+ * it should have been noted as an option
  *
  */
 
