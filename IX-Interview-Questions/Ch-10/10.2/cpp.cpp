@@ -2,6 +2,20 @@
 #include <vector>
 #include <algorithm>
 
+/*
+ * The book provides faster solutions for this
+ *
+ * The strings don't need to be sorted, they could just use an
+ * unordered_map to check if two strings are anagrams
+ *
+ * The array doesn't need to be sorted. The anagrams just need to be
+ * grouped together.
+ *
+ * I think we could get to a solution of O(n * s)
+ * where n is the number of strings and s is the length
+ * of the longest string
+ *
+ */
 
 using namespace std;
 
