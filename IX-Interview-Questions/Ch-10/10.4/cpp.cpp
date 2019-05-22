@@ -1,6 +1,10 @@
 #include <iostream>
 #include <vector>
 
+/*
+ * As usual, the book has a much more clever solution for this
+ *
+ */
 
 using namespace std;
 
