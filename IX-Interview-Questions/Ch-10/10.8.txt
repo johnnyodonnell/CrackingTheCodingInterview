@@ -1,0 +1,21 @@
+
+Number of ints = ((N - 1)N) / 2
+Max num of ints ~ (32,000^2) / 2
+
+16,000 * 32,000 = (2^4) * (10^3) * (2^5) * (10^3) = (2^9) * (10^6)
+2^9 = 512
+
+Max num of ints = 512,000,000 = (2^9) * (10^6)
+
+int is 4 bytes
+
+Vector will be 2,048,000,000 bytes or 2 GB
+
+Sorting the vector will be O(n^2) since we would need to use selection sort
+or bubble sort. After sorting, finding the duplicates would be O(n).
+
+Can disk be used?
+    - If yes, sort the ints into a million different files
+        Each file would be about 2 kb
+        Find duplicates in each file
+
