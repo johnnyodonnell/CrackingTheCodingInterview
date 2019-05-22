@@ -1,0 +1,24 @@
+
+1 billion = 1,000,000,000 = 10^9
+An int is 32 bits or 4 bytes
+
+16 billion bytes = 16 GB
+
+Separate integers into 100 different files based on their last two digits
+
+Each file will be roughly 160 MB
+
+Pull in the smallest file into memory and create a hash table with the
+integers.
+
+Iterate in increments of 100 until a new integer is found
+
+-- FOLLOW UP --
+
+Same as above, but separate integers into 10,000 different files based
+on their last 4 digits
+
+Each file will be roughly 1.6 MB
+
+Iterate in increments of 10,000 until a new integer is found
+
