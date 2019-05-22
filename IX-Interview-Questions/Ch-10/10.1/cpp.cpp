@@ -9,6 +9,9 @@ using namespace std;
  * Runs O(a + b);
  * Space O(a);
  *
+ * The book mentions starting from the back, which would provide
+ * a much better solution that the one implemented below
+ *
  */
 template <typename T>
 void merge_sorted(vector<T>& sorted_a, vector<T>& sorted_b) {
