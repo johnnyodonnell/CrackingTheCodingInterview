@@ -1,6 +1,11 @@
 #include <iostream>
 #include <vector>
 
+/*
+ * The book has a clever solution to get the runtime to O(log2(n))
+ *
+ *
+ */
 
 using namespace std;
 
