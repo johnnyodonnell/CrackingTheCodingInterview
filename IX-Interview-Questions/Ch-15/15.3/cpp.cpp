@@ -4,6 +4,7 @@
 #include <thread>
 #include <mutex>
 #include <cstdlib>
+#include <cstring>
 
 
 using namespace std;
@@ -42,12 +43,17 @@ class Philosopher {
         Philosopher& operator=(Philosopher&& p) = delete;
 
         void eat_smart() {
-            lock(left_chopstick, right_chopstick);
+            auto unique_left =
+                unique_lock<Chopstick>(left_chopstick, defer_lock);
+            auto unique_right =
+                unique_lock<Chopstick>(right_chopstick, defer_lock);
+
+            lock(unique_left, unique_right);
             print(string{"Philosopher "} + id + string{" left and right"});
 
             print(string{"Philosopher "} + id);
-            left_chopstick.unlock();
-            right_chopstick.unlock();
+            unique_left.unlock();
+            unique_right.unlock();
 
             eat_smart();
         }
@@ -69,6 +75,10 @@ class Philosopher {
 
 int main(int argc, char** argv) {
     int num_of_philosophers = atoi(argv[1]);
+    string eat_type = "default";
+    if (argc >= 3) {
+        eat_type = argv[2];
+    }
 
     vector<Philosopher> philosophers {};
 
@@ -91,9 +101,12 @@ int main(int argc, char** argv) {
 
     vector<thread> thrds {};
     for (auto& philosopher : philosophers) {
-        thread thr {[&philosopher]() {
-            // philosopher.eat();
-            philosopher.eat_smart();
+        thread thr {[&philosopher, eat_type]() {
+            if (eat_type == "smart") {
+                philosopher.eat_smart();
+            } else {
+                philosopher.eat();
+            }
         }};
         thrds.push_back(move(thr));
     }
