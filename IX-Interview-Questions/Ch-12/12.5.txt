@@ -1,0 +1,6 @@
+
+A a copy is deep, when the any change to the copy does not affect the source.
+Otherwise, it is a shallow copy.
+
+Shallow copies use less memory, but data is then shared between to references.
+
