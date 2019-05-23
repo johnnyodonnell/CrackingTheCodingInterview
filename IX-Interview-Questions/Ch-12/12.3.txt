@@ -1,0 +1,11 @@
+
+An STL map uses a binary tree unless specified to be unordered.
+An unordered STL map is essentially a Hash Table.
+
+The number of inputs is small?
+    - Small number of keys, but large number of values?
+    - Large number of keys, but small number of values?
+    - Small number of keys, and small number of values?
+
+Maybe a vector? An unordered_set?
+
