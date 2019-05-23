@@ -1,0 +1,8 @@
+
+In the main thread, measure how long it takes for a sub-thread to start
+and complete. In the sub-thread, measure how long it takes to start and
+complete.
+
+Take the difference between the time from the main thread and the time
+from the sub-thread and compare.
+
