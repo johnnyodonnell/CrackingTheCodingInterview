@@ -1,0 +1,25 @@
+
+In C++, `volatile` is used when dealing with concurrent programming.
+I can't remember exactly what it means, but I think it signifies that
+a variable may be accessed by multiple threads. Maybe it is used
+similarly in C, although I don't know much about concurrent programming
+in C.
+
+In Java, I believe `volatile` signifies that a function is non-native.
+
+--
+
+Volatile in C++:
+https://stackoverflow.com/questions/72552/why-does-volatile-exist
+https://stackoverflow.com/questions/4437527/why-do-we-use-volatile-keyword
+
+Volatile in C:
+https://stackoverflow.com/questions/246127/why-is-volatile-needed-in-c
+
+Volatile in Java:
+https://stackoverflow.com/questions/106591/what-is-the-volatile-keyword-useful-for
+
+--
+
+It appears I was wrong on all accounts
+
