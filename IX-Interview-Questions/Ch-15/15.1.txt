@@ -1,0 +1,5 @@
+
+Both processes and threads represent a task that needs to be completed.
+However, multiple threads within the same process share the same memory
+space, whereas multiple processes have their own distinct memory space.
+
