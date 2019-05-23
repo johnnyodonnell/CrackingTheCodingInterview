@@ -1,0 +1,6 @@
+
+Virtual functions work through the use of a vtable and they allow
+for polymorphism. If a virtual method is called on a pointer or
+reference to a superclass, the vtable is consulted to find which
+method class should be called.
+
