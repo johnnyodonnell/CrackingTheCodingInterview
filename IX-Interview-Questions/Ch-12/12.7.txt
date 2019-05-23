@@ -1,0 +1,5 @@
+
+It needs to be declared virtual if subclasses will be used polymorphically.
+If a subclass if used polymorphically and its base class doesn't have a
+virtual destructor, then the wrong destructor may be called.
+
