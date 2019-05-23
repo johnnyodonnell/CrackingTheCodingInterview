@@ -1,0 +1,5 @@
+
+- Reload the webpage several times
+- Write a basic script, if this doesn't count as testing tools
+- Reduce the server resources and access the webpage normally
+
