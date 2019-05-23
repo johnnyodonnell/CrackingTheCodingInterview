@@ -10,11 +10,14 @@ class Foo {
     private:
         bool first_called = false;
         bool second_called = false;
+        mutex m {};
+        condition_variable cv {};
 
     public:
         void first() {
             cout << "First called" << endl;
             first_called = true;
+            cv.notify_all();
         }
 
         bool has_first_been_called() {
@@ -24,6 +27,7 @@ class Foo {
         void second() {
             cout << "Second called" << endl;
             second_called = true;
+            cv.notify_all();
         }
 
         bool has_second_been_called() {
@@ -33,18 +37,28 @@ class Foo {
         void third() {
             cout << "Third called" << endl;
         }
+
+        template <typename P>
+        void wait(P pred) {
+            unique_lock<mutex> lck {m};
+            cv.wait(lck, pred);
+        }
 };
 
 int main() {
     Foo foo {};
 
     thread t3 {[&foo]() {
-        while(!foo.has_second_been_called()) {}
+        foo.wait([&foo]() {
+                return foo.has_second_been_called();
+                });
         foo.third();
     }};
 
     thread t2 {[&foo]() {
-        while(!foo.has_first_been_called()) {}
+        foo.wait([&foo]() {
+                return foo.has_first_been_called();
+                });
         foo.second();
     }};
 
