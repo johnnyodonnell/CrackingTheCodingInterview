@@ -1,0 +1,7 @@
+
+How to test:
+    - I would write test cases for each piece
+    - Try a plethora of both legal and illegal moves
+    - Try arcane moves, such as en passant and moving a pawn to the last row
+    - Also, try illegal moves such as moving a piece off of the board
+
