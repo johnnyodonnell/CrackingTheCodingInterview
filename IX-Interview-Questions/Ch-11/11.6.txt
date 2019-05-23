@@ -1,0 +1,6 @@
+
+Test the APIs the ATM uses
+Test the ATM to make sure it calls the proper APIs for given actions
+Test the ATM UI
+Test the ATM in different weather conditions
+
