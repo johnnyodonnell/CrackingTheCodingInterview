@@ -1,0 +1,12 @@
+
+1. Test immediate performance
+    - Does it work fresh off the factory line?
+
+2. Test long-term performance
+    - Does it hold up over time?
+    - Do we need to create a machine to test its long-term performance?
+
+3. Test performance in different weather scenarios
+    - Does it need to work in the artic?
+    - Does it need to work in space?
+
