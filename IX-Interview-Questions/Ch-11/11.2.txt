@@ -1,0 +1,8 @@
+
+Causes:
+    - Randomly generated variables
+    - Components that rely on dates
+    - Components that rely on user input
+    - Components that rely on data retrieved from the network
+    - Memory requirements
+
