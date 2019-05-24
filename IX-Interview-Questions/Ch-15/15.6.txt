@@ -1,0 +1,7 @@
+
+It looks like this question is specifically geared to Java.
+
+They cannot both execute A at the same time.
+
+The can both execute A and B at the same time, as long as A is not static
+
