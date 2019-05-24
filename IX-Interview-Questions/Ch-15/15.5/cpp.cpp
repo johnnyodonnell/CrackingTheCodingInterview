@@ -3,6 +3,13 @@
 #include <condition_variable>
 #include <thread>
 
+/*
+ * Java has Semaphores to do enable this same logic
+ * See the solution in the book
+ * Also see:
+ * https://stackoverflow.com/questions/4792449/c0x-has-no-semaphores-how-to-synchronize-threads
+ *
+ */
 
 using namespace std;
 
