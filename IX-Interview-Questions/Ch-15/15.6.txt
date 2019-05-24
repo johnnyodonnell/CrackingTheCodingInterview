@@ -5,3 +5,9 @@ They cannot both execute A at the same time.
 
 The can both execute A and B at the same time, as long as A is not static
 
+---
+
+My answer to the first part is slightly incomplete.
+My answer to the second part is wrong.
+See solution in the book.
+
