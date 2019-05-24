@@ -1,0 +1,11 @@
+
+I'm stumped on this one.
+
+My understanding of locks is that a single class cannot guarantee a lock it
+provides does not result in deadlock without knowing about all the locks
+and resources in the system. Knowing about all the locks and resources
+in a system is impractical. Thus, simply by providing a lock, a class
+is risking deadlock.
+
+I will defer to the solution in the book for this one.
+
