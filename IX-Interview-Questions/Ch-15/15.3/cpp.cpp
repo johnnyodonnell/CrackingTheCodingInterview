@@ -6,6 +6,11 @@
 #include <cstdlib>
 #include <cstring>
 
+/*
+ * Interesting thoughts on std::lock and how it's implemented:
+ * https://stackoverflow.com/a/18521611/5832619
+ *
+ */
 
 using namespace std;
 
